@@ -1,5 +1,8 @@
 # Chatbot Flow Builder – BiteSpeed Task
 
+## Live Demo
+👉 [Click here to view deployed app](https://chatbot-flow-builder-ochre.vercel.app/)
+
 This is a simple **chatbot flow builder** made using **Next.js**, **React Flow**, **Tailwind CSS**, and **react-hot-toast**.
 
 It lets you create a chatbot message flow by adding and connecting message nodes. Each message can be edited from the settings panel.
