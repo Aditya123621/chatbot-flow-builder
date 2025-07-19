@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chatbot Flow Builder – BiteSpeed Task
 
-## Getting Started
+This is a simple **chatbot flow builder** made using **Next.js**, **React Flow**, **Tailwind CSS**, and **react-hot-toast**.
 
-First, run the development server:
+It lets you create a chatbot message flow by adding and connecting message nodes. Each message can be edited from the settings panel.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧩 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ✅ Message Node (Text)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- You can drag and drop as many **message nodes** as you want.
+- Each node shows a message and a WhatsApp icon.
+- You can click a node to edit its message.
 
-## Learn More
+### ✅ Flow Builder with React Flow
 
-To learn more about Next.js, take a look at the following resources:
+- Uses [React Flow](https://reactflow.dev/) to create the flow.
+- Nodes can be connected using edges.
+- A node can have **only one outgoing edge**.
+- A node can have **multiple incoming edges**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ✅ Settings Panel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- When a node is selected, you can edit the message in the right panel.
+- It uses **debounce** (from lodash) to avoid updating too fast.
 
-## Deploy on Vercel
+### ✅ Nodes Panel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- When no node is selected, the panel on the right lets you **drag and drop** new message nodes.
+- This is built in a way to support **adding more types of nodes later**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ✅ Save Flow
+
+- There is a "Save changes" button at the top.
+- When clicked:
+  - If there are more than one nodes, and more than one of them have **no incoming connection**, it shows an error.
+  - Otherwise, it shows a success toast.
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js (App Router)**
+- **React Flow**
+- **Tailwind CSS**
+- **Lodash** (for debounce)
+- **react-hot-toast** (for toast messages)
+
+---
+
+## 🚀 How to Run
+
+1. **Clone the repo**
+
+   ```bash
+   git clone <your-repo-url>
+   cd <project-folder>
+
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
