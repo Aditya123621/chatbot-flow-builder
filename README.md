@@ -55,8 +55,8 @@ It lets you create a chatbot message flow by adding and connecting message nodes
 1. **Clone the repo**
 
    ```bash
-   git clone <your-repo-url>
-   cd <project-folder>
+   git clone git@github.com:Aditya123621/chatbot-flow-builder.git
+   cd chatbot-flow-builder
 
    ```
 
